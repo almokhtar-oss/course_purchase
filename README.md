@@ -1,24 +1,35 @@
-# README
+### New User Mutation :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```mutation{
+  createUser(
+    name: "almokhtar",
+    authProvider:{
+    credentials: {
+      email: "almokhtar@example.com",
+      password: "pass"
+    }
+    }
+  ){
+    id
+    email
+  }
+}
+```
 
-Things you may want to cover:
+### Login User Mutation :
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```mutation{
+  signinUser(
+    credentials:{
+      email: "almokhtar@example.com",
+      password: "pass"
+    }
+  ){
+    token
+    user{
+      id
+      name
+    }
+  }
+}
+```
