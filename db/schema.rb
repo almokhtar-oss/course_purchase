@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_210251) do
+ActiveRecord::Schema.define(version: 2021_02_16_210904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 2021_02_15_210251) do
     t.bigint "course_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "card_number"
+    t.integer "cvv"
+    t.date "expiry_date"
     t.index ["course_id"], name: "index_payments_on_course_id"
     t.index ["user_id"], name: "index_payments_on_user_id"
   end

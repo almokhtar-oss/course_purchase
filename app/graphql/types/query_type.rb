@@ -7,5 +7,6 @@ module Types
     field :users, resolver: Queries::UsersQuery
     field :user, resolver: Queries::UserQuery
     field :course, resolver: Queries::CourseQuery
+    field :payments, resolver: Queries::PaymentsQuery
   end
 end
