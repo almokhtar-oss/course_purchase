@@ -5,5 +5,6 @@ module Types
     field :create_course, mutation: Mutations::CreateCourse
     field :update_course, mutation: Mutations::UpdateCourse
     field :destroy_course, mutation: Mutations::DestroyCourse
+    field :create_payment, mutation: Mutations::CreatePayment
   end
 end
